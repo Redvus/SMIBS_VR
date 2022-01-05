@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/smibsar_mainactivity_dark">
+
+    <ImageView
+        android:id="@+id/main_logo_top"
+        style="@style/stylesLogoTop"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/logoMainTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/smibs_logo_front" />
+
+    <RelativeLayout
+        android:id="@+id/main_item_menu_1"
+        style="@style/stylesMainMenu"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:focusable="auto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_logo_top">
+
+        <TextView
+            android:id="@+id/main_menu_title_1"
+            style="@style/stylesMainMenuTitle"
+            android:text="@string/itemMenuMainTitle_1" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_menu_right" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_item_menu_2"
+        style="@style/stylesMainMenu"
+        android:clickable="true"
+        android:focusable="auto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_item_menu_1">
+
+        <TextView
+            android:id="@+id/main_menu_title_2"
+            style="@style/stylesMainMenuTitle"
+            android:text="@string/itemMenuMainTitle_2" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_menu_right" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_item_menu_3"
+        style="@style/stylesMainMenu"
+        android:clickable="true"
+        android:focusable="auto"
+        android:onClick="initMainMenuItem3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_item_menu_2">
+
+        <TextView
+            android:id="@+id/main_menu_title_3"
+            style="@style/stylesMainMenuTitle"
+            android:text="@string/itemMenuMainTitle_3" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_menu_right" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_item_menu_4"
+        style="@style/stylesMainMenu"
+        android:clickable="true"
+        android:focusable="auto"
+        android:onClick="initMainMenuItem4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_item_menu_3">
+
+        <TextView
+            android:id="@+id/main_menu_title_4"
+            style="@style/stylesMainMenuTitle"
+            android:text="@string/itemMenuMainTitle_4" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_menu_right" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_item_menu_5"
+        style="@style/stylesMainMenu"
+        android:background="@drawable/item_menu_border_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_item_menu_4">
+
+        <TextView
+            android:id="@+id/main_menu_title_5"
+            style="@style/stylesMainMenuTitle"
+            android:text="@string/itemMenuMainTitle_5" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_menu_right" />
+
+    </RelativeLayout>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/main_logo_top"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/main_logo_top"-->
+    <!--        app:layout_constraintTop_toBottomOf=""-->
+    <!--        tools:ignore="MissingConstraints">-->
+
+    <!--        -->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <androidx.recyclerview.widget.RecyclerView xmlns:tools="http://schemas.android.com/tools"-->
+    <!--        android:id="@+id/resycler_view_menus"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@+id/main_logo_top"-->
+    <!--        android:layout_marginLeft="32dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginRight="32dp"-->
+    <!--        android:background="@drawable/recycler_menu_border_bottom"-->
+    <!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+    <!--        tools:listitem="@layout/item_main_menu" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
