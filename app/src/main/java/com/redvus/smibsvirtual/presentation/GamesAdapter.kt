@@ -1,11 +1,12 @@
-package com.redvus.smibsvirtual
+package com.redvus.smibsvirtual.presentation
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.redvus.smibsvirtual.Game
+import com.redvus.smibsvirtual.R
 
 class GamesAdapter(games: Array<Game>) : RecyclerView.Adapter<GamesAdapter.GameViewHolder>() {
 

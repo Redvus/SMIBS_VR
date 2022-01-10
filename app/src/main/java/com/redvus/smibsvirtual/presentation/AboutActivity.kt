@@ -1,84 +1,64 @@
-package com.redvus.smibsvirtual
+package com.redvus.smibsvirtual.presentation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.recyclerview.widget.RecyclerView
-import com.redvus.smibsvirtual.ARealityActivity
-import com.redvus.smibsvirtual.databinding.ActivityGamesBinding
+import com.redvus.smibsvirtual.*
+import com.redvus.smibsvirtual.databinding.ActivityAboutBinding
 
-class GamesActivity : AppCompatActivity() {
+class AboutActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityGamesBinding
+    private lateinit var binding: ActivityAboutBinding
     private lateinit var drawerToggle: ActionBarDrawerToggle
+    private lateinit var drawerLayout: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityGamesBinding.inflate(layoutInflater)
+        binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        supportActionBar?.title = getString(R.string.titleGames)
         setSupportActionBar(binding.toolbarMain)
 
-        val drawerLayout: DrawerLayout = binding.drawer
-        drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain, R.string.open, R.string.close)
+        drawerLayout = binding.drawer
+        drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain,
+            R.string.open,
+            R.string.close
+        )
         drawerLayout.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         binding.apply {
             nv.setNavigationItemSelectedListener {
                 when(it.itemId) {
                     R.id.menu_action_main -> {
-                        startActivity(Intent(this@GamesActivity, MainActivity::class.java))
+                        startActivity(Intent(this@AboutActivity, MainActivity::class.java))
                     }
                     R.id.menu_action_ar -> {
-                        startActivity(Intent(this@GamesActivity, ARealityActivity::class.java))
+                        startActivity(Intent(this@AboutActivity, ARealityActivity::class.java))
+                    }
+                    R.id.menu_action_games -> {
+                        startActivity(Intent(this@AboutActivity, GamesActivity::class.java))
                     }
                     R.id.menu_action_about -> {
-                        startActivity(Intent(this@GamesActivity, AboutActivity::class.java))
+                        startActivity(Intent(this@AboutActivity, AboutActivity::class.java))
                     }
                     R.id.menu_action_how -> {
-                        startActivity(Intent(this@GamesActivity, HowActivity::class.java))
+                        startActivity(Intent(this@AboutActivity, HowActivity::class.java))
                     }
                 }
                 true
             }
         }
 
-        val list = findViewById<RecyclerView>(R.id.resycler_view_games)
+        val longText = getString(R.string.article_pushkin_stih)
+        val output: TextView = binding.textAbout
+        output.text = longText
 
-        val games: Array<Game> = arrayOf(
-            Game(
-                R.drawable.smibsg_cosmicpuzzles
-            ),
-            Game(
-                R.drawable.smibsg_igroskazy
-            ),
-            Game(
-                R.drawable.smibsg_magicfeather
-            ),
-            Game(
-                R.drawable.smibsg_oldappartment
-            ),
-            Game(
-                R.drawable.smibsg_pasternak
-            ),
-            Game(
-                R.drawable.smibsg_rilke
-            ),
-            Game(
-                R.drawable.smibsg_siberiandraw
-            ),
-            Game(
-                R.drawable.smibsg_smekailo
-            )
-        )
-
-        val adapter = GamesAdapter(games)
-        list.adapter = adapter
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -93,7 +73,7 @@ class GamesActivity : AppCompatActivity() {
 //        inflater.inflate(R.menu.menu_main, menu)
 //        return super.onCreateOptionsMenu(menu)
 //    }
-//
+
 //    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 //        when (item.itemId) {
 //            R.id.menu_action_main -> {
@@ -121,5 +101,3 @@ class GamesActivity : AppCompatActivity() {
 //        return super.onOptionsItemSelected(item)
 //    }
 }
-
-data class Game(var image: Int)

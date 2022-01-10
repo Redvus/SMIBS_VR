@@ -20,10 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SMIBSVirtual">
         <activity
-            android:name=".ARcameraActivity"
+            android:name=".presentation.ARcameraActivity"
             android:exported="false" />
         <activity
-            android:name=".ARealityActivity"
+            android:name=".presentation.ARealityActivity"
             android:exported="false"
             android:label="@string/actionAR" />
         <activity
@@ -31,15 +31,15 @@
             android:exported="false"
             android:label="@string/actionGames" />
         <activity
-            android:name=".HowActivity"
+            android:name=".presentation.HowActivity"
             android:exported="false"
             android:label="@string/actionHow" />
         <activity
-            android:name=".AboutActivity"
+            android:name=".presentation.AboutActivity"
             android:exported="true"
             android:label="@string/actionAbout" />
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

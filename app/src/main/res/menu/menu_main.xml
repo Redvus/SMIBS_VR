@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/menu_action_main"
+        android:icon="@drawable/ic_menu_home"
+        android:orderInCategory="100"
+        android:title="@string/actionMain"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_action_ar"
+        android:icon="@drawable/ic_menu_ar"
+        android:orderInCategory="100"
+        android:title="@string/actionAR"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_action_games"
+        android:icon="@drawable/ic_menu_games"
+        android:orderInCategory="100"
+        android:title="@string/actionGames"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_action_about"
+        android:icon="@drawable/ic_menu_about"
+        android:orderInCategory="100"
+        android:title="@string/actionAbout"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_action_how"
+        android:icon="@drawable/ic_menu_how"
+        android:orderInCategory="100"
+        android:title="@string/actionHow"
+        app:showAsAction="never" />
+
+
+</menu>

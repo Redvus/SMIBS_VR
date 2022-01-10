@@ -1,11 +1,9 @@
-package com.redvus.smibsvirtual
+package com.redvus.smibsvirtual.presentation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import com.redvus.smibsvirtual.GamesActivity
 import com.redvus.smibsvirtual.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
