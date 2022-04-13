@@ -26,7 +26,7 @@ class ARealityActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityArealityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbarMain)
+        //setSupportActionBar(binding.toolbarMain)
 
         drawerLayout = binding.drawer
         drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain, R.string.open, R.string.close)

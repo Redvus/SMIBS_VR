@@ -7,6 +7,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.redvus.smibsvirtual.data.Game
 import com.redvus.smibsvirtual.databinding.ActivityGamesBinding
 import com.redvus.smibsvirtual.presentation.*
 
@@ -20,13 +21,14 @@ class GamesActivity : AppCompatActivity() {
         binding = ActivityGamesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 //        supportActionBar?.title = getString(R.string.titleGames)
-        setSupportActionBar(binding.toolbarMain)
+        //setSupportActionBar(binding.toolbarMain)
 
         val drawerLayout: DrawerLayout = binding.drawer
         drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
 
+        //Main menu
         binding.apply {
             nv.setNavigationItemSelectedListener {
                 when(it.itemId) {
@@ -47,8 +49,8 @@ class GamesActivity : AppCompatActivity() {
             }
         }
 
+        // List of games
         val list = findViewById<RecyclerView>(R.id.resycler_view_games)
-
         val games: Array<Game> = arrayOf(
             Game(
                 R.drawable.smibsg_cosmicpuzzles
@@ -87,38 +89,13 @@ class GamesActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        val inflater = menuInflater
-//        inflater.inflate(R.menu.menu_main, menu)
-//        return super.onCreateOptionsMenu(menu)
+    // Ссылка на Google Play
+    // https://stackoverflow.com/questions/11753000/how-to-open-the-google-play-store-directly-from-my-android-application
+    // https://developer.android.com/distribute/marketing-tools/linking-to-google-play?hl=he#android-app
+//    try {
+//        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$packageName")))
+//    } catch (e: ActivityNotFoundException) {
+//        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$packageName")))
 //    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when (item.itemId) {
-//            R.id.menu_action_main -> {
-//                startActivity(Intent(this, MainActivity::class.java))
-//                return true
-//            }
-//            R.id.menu_action_ar -> {
-//                startActivity(Intent(this, ARealityActivity::class.java))
-//                return true
-//            }
-//            R.id.menu_action_about -> {
-//                startActivity(Intent(this, AboutActivity::class.java))
-//                return true
-//            }
-//            R.id.menu_action_how -> {
-//                startActivity(Intent(this, HowActivity::class.java))
-//                return true
-//            }
-//            R.id.menu_action_games -> {
-//                startActivity(Intent(this, GamesActivity::class.java))
-//                return true
-//            }
-//
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
-}
 
-data class Game(var image: Int)
+}

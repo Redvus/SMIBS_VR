@@ -19,6 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.SMIBSVirtual">
+
         <activity
             android:name=".presentation.ARcameraActivity"
             android:exported="false" />

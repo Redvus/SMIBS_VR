@@ -5,8 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.redvus.smibsvirtual.Game
 import com.redvus.smibsvirtual.R
+import com.redvus.smibsvirtual.data.Game
 
 class GamesAdapter(games: Array<Game>) : RecyclerView.Adapter<GamesAdapter.GameViewHolder>() {
 

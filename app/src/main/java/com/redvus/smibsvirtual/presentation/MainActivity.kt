@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
 //    }
 
     private fun initMainMenuButtons() = with(binding) {
-
         mainItemMenu1.setOnClickListener {
             startActivity(Intent(this@MainActivity, ARealityActivity::class.java))
         }

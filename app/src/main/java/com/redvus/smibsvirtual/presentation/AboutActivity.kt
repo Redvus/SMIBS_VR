@@ -20,7 +20,7 @@ class AboutActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbarMain)
+        //setSupportActionBar(binding.toolbarMain)
 
         drawerLayout = binding.drawer
         drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain,

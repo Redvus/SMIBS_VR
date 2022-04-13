@@ -19,7 +19,7 @@ class HowActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHowBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbarMain)
+        //setSupportActionBar(binding.toolbarMain)
 
         val drawerLayout: DrawerLayout = binding.drawer
         drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain,
