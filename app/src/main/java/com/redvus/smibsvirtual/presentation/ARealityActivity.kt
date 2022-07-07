@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.redvus.smibsvirtual.*
 import com.redvus.smibsvirtual.databinding.ActivityArealityBinding
 
+
 class ARealityActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityArealityBinding
@@ -26,19 +27,26 @@ class ARealityActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityArealityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //setSupportActionBar(binding.toolbarMain)
+        supportActionBar?.title = getString(R.string.titleAR)
+        setSupportActionBar(binding.toolbarMain)
 
         drawerLayout = binding.drawer
-        drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain, R.string.open, R.string.close)
+        drawerToggle = ActionBarDrawerToggle(
+            this,
+            drawerLayout,
+            binding.toolbarMain,
+            R.string.open,
+            R.string.close
+        )
         drawerLayout.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
 
         binding.apply {
             nv.setNavigationItemSelectedListener {
-                when(it.itemId) {
-                    R.id.menu_action_main -> {
-                        startActivity(Intent(this@ARealityActivity, MainActivity::class.java))
-                    }
+                when (it.itemId) {
+//                    R.id.menu_action_main -> {
+//                        startActivity(Intent(this@ARealityActivity, MainActivity::class.java))
+//                    }
                     R.id.menu_action_ar -> {
                         startActivity(Intent(this@ARealityActivity, ARealityActivity::class.java))
                     }
@@ -59,7 +67,7 @@ class ARealityActivity : AppCompatActivity() {
         val listProjects = findViewById<RecyclerView>(R.id.resycler_projects)
 
         val projects: Array<Project> = arrayOf(
-            Project (
+            Project(
                 R.drawable.dav_board_giantbow,
                 getString(R.string.davBowTitle),
                 getString(R.string.davBowText)
@@ -99,7 +107,11 @@ class ARealityActivity : AppCompatActivity() {
     }
 
     private fun checkCameraPermission() {
-        if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(
+                this,
+                android.Manifest.permission.CAMERA
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
             ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CAMERA), 12)
         } else {
             startActivity(Intent(this, ARcameraActivity::class.java))
@@ -113,8 +125,8 @@ class ARealityActivity : AppCompatActivity() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
-        if(requestCode == 12) {
-            if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        if (requestCode == 12) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 startActivity(Intent(this, ARcameraActivity::class.java))
             }
         }

@@ -3,7 +3,6 @@ package com.redvus.smibsvirtual.presentation
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.redvus.smibsvirtual.GamesActivity
 import com.redvus.smibsvirtual.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

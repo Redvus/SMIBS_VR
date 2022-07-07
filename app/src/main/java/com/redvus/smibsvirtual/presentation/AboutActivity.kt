@@ -20,10 +20,12 @@ class AboutActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //setSupportActionBar(binding.toolbarMain)
+        supportActionBar?.title = getString(R.string.titleAbout)
+        setSupportActionBar(binding.toolbarMain)
 
         drawerLayout = binding.drawer
-        drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain,
+        drawerToggle = ActionBarDrawerToggle(
+            this, drawerLayout, binding.toolbarMain,
             R.string.open,
             R.string.close
         )
@@ -34,10 +36,10 @@ class AboutActivity : AppCompatActivity() {
 
         binding.apply {
             nv.setNavigationItemSelectedListener {
-                when(it.itemId) {
-                    R.id.menu_action_main -> {
-                        startActivity(Intent(this@AboutActivity, MainActivity::class.java))
-                    }
+                when (it.itemId) {
+//                    R.id.menu_action_main -> {
+//                        startActivity(Intent(this@AboutActivity, MainActivity::class.java))
+//                    }
                     R.id.menu_action_ar -> {
                         startActivity(Intent(this@AboutActivity, ARealityActivity::class.java))
                     }

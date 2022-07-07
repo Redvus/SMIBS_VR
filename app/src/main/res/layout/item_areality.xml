@@ -13,6 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
         android:orientation="vertical">
 
         <ImageView
@@ -27,14 +28,14 @@
             style="@style/stylesTitle"
             android:layout_gravity="center_horizontal"
             android:fontFamily="sans-serif-black"
-            android:text="@string/titleAR"
-            android:textSize="18sp" />
+            android:text="@string/titleAR" />
 
         <TextView
             android:id="@+id/project_text"
             style="@style/stylesText"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/textAR" />
+            android:layout_gravity="fill_horizontal"
+            android:text="@string/textAR"
+            android:textAlignment="gravity" />
 
     </LinearLayout>
 

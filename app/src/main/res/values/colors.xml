@@ -15,4 +15,7 @@
     <color name="backgroundColor">#ffe1cd</color>
     <color name="accentColor">#830800</color>
 
+    <!--  Colors Dark theme  -->
+    <color name="backgroundColorDark">@color/primaryColor</color>
+
 </resources>

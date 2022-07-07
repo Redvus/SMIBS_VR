@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import com.redvus.smibsvirtual.GamesActivity
 import com.redvus.smibsvirtual.R
 import com.redvus.smibsvirtual.databinding.ActivityHowBinding
 
@@ -19,7 +18,8 @@ class HowActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHowBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //setSupportActionBar(binding.toolbarMain)
+        supportActionBar?.title = getString(R.string.titleHow)
+        setSupportActionBar(binding.toolbarMain)
 
         val drawerLayout: DrawerLayout = binding.drawer
         drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain,
@@ -32,9 +32,9 @@ class HowActivity : AppCompatActivity() {
         binding.apply {
             nv.setNavigationItemSelectedListener {
                 when(it.itemId) {
-                    R.id.menu_action_main -> {
-                        startActivity(Intent(this@HowActivity, MainActivity::class.java))
-                    }
+//                    R.id.menu_action_main -> {
+//                        startActivity(Intent(this@HowActivity, MainActivity::class.java))
+//                    }
                     R.id.menu_action_ar -> {
                         startActivity(Intent(this@HowActivity, ARealityActivity::class.java))
                     }

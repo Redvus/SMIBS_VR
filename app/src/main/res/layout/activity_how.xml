@@ -11,7 +11,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/stylesLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
 
         <ImageView
             android:id="@+id/logo_about"
@@ -61,14 +62,9 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nv"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@color/primaryColor"
-        android:fitsSystemWindows="true"
+        style="@style/navigationMenuStyle"
         app:headerLayout="@layout/menu_header"
         app:itemIconTint="@color/accentColor"
-        app:itemTextColor="@color/accentColor"
         app:menu="@menu/menu_main" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

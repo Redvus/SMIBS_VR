@@ -18,6 +18,7 @@
             style="@style/stylesLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/backgroundColor"
             android:paddingBottom="24dp">
 
             <ImageView
@@ -69,14 +70,9 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nv"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@color/primaryColor"
-        android:fitsSystemWindows="true"
+        style="@style/navigationMenuStyle"
         app:headerLayout="@layout/menu_header"
         app:itemIconTint="@color/accentColor"
-        app:itemTextColor="@color/accentColor"
         app:menu="@menu/menu_main" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

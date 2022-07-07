@@ -1,4 +1,4 @@
-package com.redvus.smibsvirtual
+package com.redvus.smibsvirtual.presentation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +7,9 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.redvus.smibsvirtual.R
 import com.redvus.smibsvirtual.data.Game
 import com.redvus.smibsvirtual.databinding.ActivityGamesBinding
-import com.redvus.smibsvirtual.presentation.*
 
 class GamesActivity : AppCompatActivity() {
 
@@ -20,11 +20,14 @@ class GamesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGamesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        supportActionBar?.title = getString(R.string.titleGames)
-        //setSupportActionBar(binding.toolbarMain)
+        supportActionBar?.title = getString(R.string.titleGames)
+        setSupportActionBar(binding.toolbarMain)
 
         val drawerLayout: DrawerLayout = binding.drawer
-        drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain, R.string.open, R.string.close)
+        drawerToggle = ActionBarDrawerToggle(this, drawerLayout, binding.toolbarMain,
+            R.string.open,
+            R.string.close
+        )
         drawerLayout.addDrawerListener(drawerToggle)
         drawerToggle.syncState()
 
@@ -32,9 +35,9 @@ class GamesActivity : AppCompatActivity() {
         binding.apply {
             nv.setNavigationItemSelectedListener {
                 when(it.itemId) {
-                    R.id.menu_action_main -> {
-                        startActivity(Intent(this@GamesActivity, MainActivity::class.java))
-                    }
+//                    R.id.menu_action_main -> {
+//                        startActivity(Intent(this@GamesActivity, MainActivity::class.java))
+//                    }
                     R.id.menu_action_ar -> {
                         startActivity(Intent(this@GamesActivity, ARealityActivity::class.java))
                     }

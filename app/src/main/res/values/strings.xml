@@ -40,9 +40,10 @@
     <string name="textGames">Должен быть список пунктов</string>
     <string name="itemGameTitle">Название игры</string>
     <string name="itemGameDescription">Описание игры</string>
+    <string name="titleGameCosmicPuzzles">Космические пазлы</string>
 
     <!--  String How  -->
-    <string name="titleHow">Как пользоваться\nприложением</string>
+    <string name="titleHow">Использование\nприложения</string>
     <string name="textHow">Должен быть список пунктов</string>
 
     <!--  String About  -->

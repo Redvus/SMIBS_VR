@@ -12,8 +12,8 @@
         android:required="true" />
 
     <application
-        android:fullBackupOnly="true"
         android:allowBackup="true"
+        android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
@@ -22,26 +22,32 @@
 
         <activity
             android:name=".presentation.ARcameraActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".presentation.ARealityActivity"
             android:exported="false"
-            android:label="@string/actionAR" />
+            android:label="@string/actionAR"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".GamesActivity"
+            android:name=".presentation.GamesActivity"
             android:exported="false"
-            android:label="@string/actionGames" />
+            android:label="@string/actionGames"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".presentation.HowActivity"
             android:exported="false"
-            android:label="@string/actionHow" />
+            android:label="@string/actionHow"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".presentation.AboutActivity"
             android:exported="true"
-            android:label="@string/actionAbout" />
+            android:label="@string/actionAbout"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".presentation.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
