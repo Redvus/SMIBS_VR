@@ -1,5 +1,6 @@
 package com.redvus.smibsvirtual.presentation
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -31,7 +32,8 @@ class ARcameraActivity : AppCompatActivity(), ZBarScannerView.ResultHandler {
 
     override fun handleResult(result: Result?) {
 //        Log.d("MyLog", "Сканер работает")
-        Toast.makeText(this, "Сканер работает", Toast.LENGTH_LONG).show()
+//        Toast.makeText(this, "Сканер работает", Toast.LENGTH_LONG).show()
+        startActivity(Intent(this,HelloArActivity::class.java))
         finish()
     }
 
