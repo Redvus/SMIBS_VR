@@ -17,23 +17,19 @@ import com.google.ar.core.exceptions.UnavailableApkTooOldException
 import com.google.ar.core.exceptions.UnavailableDeviceNotCompatibleException
 import com.google.ar.core.exceptions.UnavailableSdkTooOldException
 import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException
-import com.redvus.smibsvirtual.data.HelloArRenderer
+import com.redvus.smibsvirtual.R
+import com.redvus.smibsvirtual.data.DaVCalculatorArRenderer
 import com.redvus.smibsvirtual.databinding.ActivityArtestBinding
-import com.redvus.smibsvirtual.domain.HelloArView
+import com.redvus.smibsvirtual.domain.DaVCalculatorArView
 
-/**
- * This is a simple example that shows how to create an augmented reality (AR) application using the
- * ARCore API. The application will display any detected planes and will allow the user to tap on a
- * plane to place a 3D model.
- */
-class HelloArActivity : AppCompatActivity() {
+class DaVCalculatorArActivity : AppCompatActivity() {
     companion object {
-        private const val TAG = "HelloArActivity"
+        private const val TAG = "DaVCalculatorActivity"
     }
 
     lateinit var arCoreSessionHelper: ARCoreSessionLifecycleHelper
-    lateinit var view: HelloArView
-    private lateinit var renderer: HelloArRenderer
+    lateinit var view: DaVCalculatorArView
+    private lateinit var renderer: DaVCalculatorArRenderer
     private lateinit var binding: ActivityArtestBinding
 
     val instantPlacementSettings = InstantPlacementSettings()
@@ -55,11 +51,11 @@ class HelloArActivity : AppCompatActivity() {
                 val message =
                     when (exception) {
                         is UnavailableUserDeclinedInstallationException ->
-                            "Установите Google Play Services для AR"
-                        is UnavailableApkTooOldException -> "Обновите ARCore"
-                        is UnavailableSdkTooOldException -> "Обновите это приложение"
-                        is UnavailableDeviceNotCompatibleException -> "Это устройство не поддерживает AR"
-                        is CameraNotAvailableException -> "Камера недоступна. Попробуйте перезапустить приложение."
+                            getString(R.string.setupARServices)
+                        is UnavailableApkTooOldException -> getString(R.string.updateARCore)
+                        is UnavailableSdkTooOldException -> getString(R.string.updateARApp)
+                        is UnavailableDeviceNotCompatibleException -> getString(R.string.deviceNotAR)
+                        is CameraNotAvailableException -> getString(R.string.cameraNotActive)
                         else -> "Ошибка пр создании AR сессии: $exception"
                     }
                 Log.e(TAG, "ARCore выдал исключение", exception)
@@ -71,11 +67,11 @@ class HelloArActivity : AppCompatActivity() {
         lifecycle.addObserver(arCoreSessionHelper)
 
         // Set up the Hello AR renderer.
-        renderer = HelloArRenderer(this)
+        renderer = DaVCalculatorArRenderer(this)
         lifecycle.addObserver(renderer)
 
         // Set up Hello AR UI.
-        view = HelloArView(this)
+        view = DaVCalculatorArView(this)
         lifecycle.addObserver(view)
         setContentView(view.root)
 
@@ -121,7 +117,7 @@ class HelloArActivity : AppCompatActivity() {
             // Use toast instead of snackbar here since the activity will exit.
             Toast.makeText(
                 this,
-                "Для запуска этого приложения требуется разрешение камеры",
+                getText(R.string.cameraARPermission),
                 Toast.LENGTH_LONG
             )
                 .show()

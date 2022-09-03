@@ -20,7 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SMIBSVirtual">
         <activity
-            android:name=".presentation.HelloArActivity"
+            android:name=".presentation.DaVClockArActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.DaVCalculatorArActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

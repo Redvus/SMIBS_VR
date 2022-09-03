@@ -32,15 +32,15 @@ import com.redvus.smibsvirtual.samplerender.arcore.SpecularCubemapFilter
 import com.google.ar.core.exceptions.CameraNotAvailableException
 import com.google.ar.core.exceptions.NotYetAvailableException
 import com.redvus.smibsvirtual.R
-import com.redvus.smibsvirtual.presentation.HelloArActivity
+import com.redvus.smibsvirtual.presentation.DaVClockArActivity
 import java.io.IOException
 import java.nio.ByteBuffer
 
 /** Renders the HelloAR application using our example Renderer. */
-class HelloArRenderer(val activity: HelloArActivity) :
+class DaVClockArRenderer(val activity: DaVClockArActivity) :
     SampleRender.Renderer, DefaultLifecycleObserver {
     companion object {
-        val TAG = "HelloArRenderer"
+        val TAG = "DaVClockArRenderer"
 
         // See the definition of updateSphericalHarmonicsCoefficients for an explanation of these
         // constants.

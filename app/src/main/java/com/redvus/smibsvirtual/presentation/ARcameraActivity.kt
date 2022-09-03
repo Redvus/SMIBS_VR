@@ -5,17 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.redvus.smibsvirtual.R
-import me.dm7.barcodescanner.zbar.Result
-import me.dm7.barcodescanner.zbar.ZBarScannerView
+import me.dm7.barcodescanner.zxing.ZXingScannerView
 
-class ARcameraActivity : AppCompatActivity(), ZBarScannerView.ResultHandler {
+class ARcameraActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
 
-    private lateinit var zbView: ZBarScannerView
+    private lateinit var zbView: ZXingScannerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_arcamera)
-        zbView = ZBarScannerView(this)
+        zbView = ZXingScannerView(this)
         setContentView(zbView)
     }
 
@@ -30,10 +29,29 @@ class ARcameraActivity : AppCompatActivity(), ZBarScannerView.ResultHandler {
         zbView.startCamera()
     }
 
-    override fun handleResult(result: Result?) {
+    override fun handleResult(rawResult: com.google.zxing.Result?) {
 //        Log.d("MyLog", "Сканер работает")
-//        Toast.makeText(this, "Сканер работает", Toast.LENGTH_LONG).show()
-        startActivity(Intent(this,HelloArActivity::class.java))
+//        Log.v("MyLog", rawResult.toString())
+//        Toast.makeText(this, "Scan Result = " + data.getStringExtra(ZBarConstants.SCAN_RESULT), Toast.LENGTH_SHORT).show()
+
+//        startActivity(Intent(this,HelloArActivity::class.java))
+
+        val scanQRResult: String = rawResult.toString()
+        val davClockQR = getString(R.string.davClockQR)
+        val davCalculatorQR = getString(R.string.davCalculatorQR)
+////
+        when (scanQRResult) {
+            davClockQR -> {
+                startActivity(Intent(this, DaVClockArActivity::class.java))
+            }
+            davCalculatorQR -> {
+                startActivity(Intent(this, DaVCalculatorArActivity::class.java))
+            }
+            else -> {
+                startActivity(Intent(this, ARealityActivity::class.java))
+                Toast.makeText(this, getText(R.string.scanQRCodeFail), Toast.LENGTH_LONG).show()
+            }
+        }
         finish()
     }
 

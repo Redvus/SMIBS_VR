@@ -3,8 +3,6 @@ package com.redvus.smibsvirtual.domain
 import android.content.res.Resources
 import android.opengl.GLSurfaceView
 import android.view.View
-import android.widget.ImageButton
-import android.widget.PopupMenu
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
@@ -12,10 +10,10 @@ import com.google.ar.core.Config
 import com.redvus.smibsvirtual.R
 import com.redvus.smibsvirtual.helpers.SnackbarHelper
 import com.redvus.smibsvirtual.helpers.TapHelper
-import com.redvus.smibsvirtual.presentation.HelloArActivity
+import com.redvus.smibsvirtual.presentation.DaVClockArActivity
 
 /** Contains UI elements for Hello AR. */
-class HelloArView(val activity: HelloArActivity) : DefaultLifecycleObserver {
+class DaVClockArView(val activity: DaVClockArActivity) : DefaultLifecycleObserver {
     val root = View.inflate(activity, R.layout.activity_artest, null)
     val surfaceView = root.findViewById<GLSurfaceView>(R.id.surfaceview)
 //    val settingsButton =

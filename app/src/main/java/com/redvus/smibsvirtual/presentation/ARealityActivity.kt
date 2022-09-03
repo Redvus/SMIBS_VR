@@ -112,7 +112,7 @@ class ARealityActivity : AppCompatActivity() {
                 android.Manifest.permission.CAMERA
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CAMERA), 12)
+            ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CAMERA), 5973)
         } else {
             startActivity(Intent(this, ARcameraActivity::class.java))
         }
@@ -125,7 +125,7 @@ class ARealityActivity : AppCompatActivity() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
-        if (requestCode == 12) {
+        if (requestCode == 5973) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 startActivity(Intent(this, ARcameraActivity::class.java))
             }

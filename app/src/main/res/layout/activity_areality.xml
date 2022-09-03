@@ -8,9 +8,10 @@
     tools:context=".presentation.ARealityActivity"
     tools:openDrawer="start">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:isScrollContainer="true"
         android:scrollbars="none">
 
         <androidx.recyclerview.widget.RecyclerView
@@ -22,7 +23,7 @@
             android:paddingBottom="82dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_areality" />
-    </ScrollView>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
