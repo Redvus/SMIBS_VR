@@ -27,7 +27,6 @@
             android:id="@+id/project_title"
             style="@style/stylesTitle"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="sans-serif-black"
             android:text="@string/titleAR" />
 
         <TextView

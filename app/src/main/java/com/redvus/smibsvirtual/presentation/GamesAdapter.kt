@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.redvus.smibsvirtual.R
 import com.redvus.smibsvirtual.data.Game
@@ -22,18 +23,18 @@ class GamesAdapter(games: Array<Game>) : RecyclerView.Adapter<GamesAdapter.GameV
     }
 
     override fun onBindViewHolder(holder: GameViewHolder, position: Int) {
-        holder.bind(games[position])
+        holder.bindGames(games[position])
     }
 
     class GameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val appImage: ImageView = itemView.findViewById(R.id.image_view_game_icon)
-//        private val appTitle: TextView = itemView.findViewById(R.id.text_view_game_title)
-//        private val appDescription: TextView = itemView.findViewById(R.id.text_view_game_description)
+        private val appTitle: TextView = itemView.findViewById(R.id.game_button_download)
+        private val appDescription: TextView = itemView.findViewById(R.id.text_view_game_description)
 
-        fun bind(game: Game) {
-//            appTitle.text = game.name
-//            appDescription.text = game.description
+        fun bindGames(game: Game) {
             appImage.setImageResource(game.image)
+            appTitle.text = game.name
+            appDescription.text = game.description
         }
     }
 }

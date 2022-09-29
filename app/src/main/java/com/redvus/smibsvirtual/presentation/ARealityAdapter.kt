@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.redvus.smibsvirtual.data.Project
 
 class ARealityAdapter(projects: Array<Project>) : RecyclerView.Adapter<ARealityAdapter.ARViewHolder>() {
 
@@ -36,5 +37,3 @@ class ARealityAdapter(projects: Array<Project>) : RecyclerView.Adapter<ARealityA
         return projects.size
     }
 }
-
-data class Project(var image: Int, var name: String, var description: String)

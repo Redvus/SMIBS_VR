@@ -56,28 +56,52 @@ class GamesActivity : AppCompatActivity() {
         val list = findViewById<RecyclerView>(R.id.resycler_view_games)
         val games: Array<Game> = arrayOf(
             Game(
-                R.drawable.smibsg_cosmicpuzzles
+                R.drawable.smibsg_cosmicpuzzles,
+                getString(R.string.titleCosmicPuzzles),
+                getString(R.string.textCosmicPuzzles),
+                R.string.packageCosmicPuzzles
             ),
             Game(
-                R.drawable.smibsg_igroskazy
+                R.drawable.smibsg_igroskazy,
+                getString(R.string.titleIgroskazi),
+                getString(R.string.textIgroskazi),
+                R.string.packageIgroskazy
             ),
             Game(
-                R.drawable.smibsg_magicfeather
+                R.drawable.smibsg_magicfeather,
+                getString(R.string.titleMagicfeather),
+                getString(R.string.textMagicfeather),
+                R.string.packageMagicfeather
             ),
             Game(
-                R.drawable.smibsg_oldappartment
+                R.drawable.smibsg_oldappartment,
+                getString(R.string.titleOldappartment),
+                getString(R.string.textOldappartment),
+                R.string.packageOldappartment
             ),
             Game(
-                R.drawable.smibsg_pasternak
+                R.drawable.smibsg_pasternak,
+                getString(R.string.titlePasternak),
+                getString(R.string.textPasternak),
+                R.string.packagePasternak
             ),
             Game(
-                R.drawable.smibsg_rilke
+                R.drawable.smibsg_rilke,
+                getString(R.string.titleRilke),
+                getString(R.string.textRilke),
+                R.string.packageRilke
             ),
             Game(
-                R.drawable.smibsg_siberiandraw
+                R.drawable.smibsg_siberiandraw,
+                getString(R.string.titleSiberiandraw),
+                getString(R.string.textSiberiandraw),
+                R.string.packageSiberiandraw
             ),
             Game(
-                R.drawable.smibsg_smekailo
+                R.drawable.smibsg_smekailo,
+                getString(R.string.titleSmekailo),
+                getString(R.string.textSmekailo),
+                R.string.packageSmekailo
             )
         )
 
@@ -91,14 +115,5 @@ class GamesActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
-    // Ссылка на Google Play
-    // https://stackoverflow.com/questions/11753000/how-to-open-the-google-play-store-directly-from-my-android-application
-    // https://developer.android.com/distribute/marketing-tools/linking-to-google-play?hl=he#android-app
-//    try {
-//        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$packageName")))
-//    } catch (e: ActivityNotFoundException) {
-//        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$packageName")))
-//    }
 
 }

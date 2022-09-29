@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:paddingTop="62dp"
-            android:paddingBottom="82dp"
+            android:paddingBottom="90dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_areality" />
     </LinearLayout>
@@ -40,19 +40,18 @@
 
         <Button
             android:id="@+id/button_scan_ar"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="124dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="12dp"
             android:layout_marginBottom="16dp"
+            android:paddingLeft="16dp"
             android:backgroundTint="@color/accentColor"
             android:drawableStart="@drawable/ic_qr_code_scanner"
             android:elevation="4dp"
             android:text="@string/buttonScan"
             android:textColor="@color/primaryColor"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
