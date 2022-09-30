@@ -57,7 +57,7 @@ class AboutActivity : AppCompatActivity() {
             }
         }
 
-        val longText = getString(R.string.article_pushkin_stih)
+        val longText = getString(R.string.textAbout)
         val output: TextView = binding.textAbout
         output.text = longText
 
