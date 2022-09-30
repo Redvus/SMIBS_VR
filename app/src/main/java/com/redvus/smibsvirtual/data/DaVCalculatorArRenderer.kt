@@ -434,7 +434,7 @@ class DaVCalculatorArRenderer(val activity: DaVCalculatorArActivity) :
                 viewMatrix
             )
             updateSphericalHarmonicsCoefficients(lightEstimate.environmentalHdrAmbientSphericalHarmonics)
-            cubemapFilter.update(lightEstimate.acquireEnvironmentalHdrCubeMap())
+//            cubemapFilter.update(lightEstimate.acquireEnvironmentalHdrCubeMap())
         }
 
         private fun updateMainLight(

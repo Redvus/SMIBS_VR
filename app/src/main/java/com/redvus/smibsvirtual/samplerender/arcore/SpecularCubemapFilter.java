@@ -20,7 +20,8 @@ import static java.lang.Math.min;
 
 import android.opengl.GLES30;
 import android.util.Log;
-import com.google.ar.core.ArImage;
+
+//import com.google.ar.core.ArImage;
 import com.google.ar.core.ImageFormat;
 import com.redvus.smibsvirtual.samplerender.GLError;
 import com.redvus.smibsvirtual.samplerender.Mesh;
@@ -28,6 +29,7 @@ import com.redvus.smibsvirtual.samplerender.SampleRender;
 import com.redvus.smibsvirtual.samplerender.Shader;
 import com.redvus.smibsvirtual.samplerender.Texture;
 import com.redvus.smibsvirtual.samplerender.VertexBuffer;
+
 import java.io.Closeable;
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -233,71 +235,71 @@ public class SpecularCubemapFilter implements Closeable {
    *
    * <p>The given {@link ArImage}s will be closed by this method, even if an exception occurs.
    */
-  public void update(ArImage[] images) {
-    try {
-      GLES30.glBindTexture(GLES30.GL_TEXTURE_CUBE_MAP, radianceCubemap.getTextureId());
-      GLError.maybeThrowGLException("Failed to bind radiance cubemap texture", "glBindTexture");
-
-      if (images.length != NUMBER_OF_CUBE_FACES) {
-        throw new IllegalArgumentException(
-            "Number of images differs from the number of sides of a cube.");
-      }
-
-      for (int i = 0; i < NUMBER_OF_CUBE_FACES; ++i) {
-        ArImage image = images[i];
-        // Sanity check for the format of the cubemap.
-        if (image.getFormat() != ImageFormat.RGBA_FP16) {
-          throw new IllegalArgumentException(
-              "Unexpected image format for cubemap: " + image.getFormat());
-        }
-        if (image.getHeight() != image.getWidth()) {
-          throw new IllegalArgumentException("Cubemap face is not square.");
-        }
-        if (image.getHeight() != resolution) {
-          throw new IllegalArgumentException(
-              "Cubemap face resolution ("
-                  + image.getHeight()
-                  + ") does not match expected value ("
-                  + resolution
-                  + ").");
-        }
-
-        GLES30.glTexImage2D(
-            GLES30.GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
-            /*level=*/ 0,
-            GLES30.GL_RGBA16F,
-            /*width=*/ resolution,
-            /*height=*/ resolution,
-            /*border=*/ 0,
-            GLES30.GL_RGBA,
-            GLES30.GL_HALF_FLOAT,
-            image.getPlanes()[0].getBuffer());
-        GLError.maybeThrowGLException("Failed to populate cubemap face", "glTexImage2D");
-      }
-
-      GLES30.glGenerateMipmap(GLES30.GL_TEXTURE_CUBE_MAP);
-      GLError.maybeThrowGLException("Failed to generate cubemap mipmaps", "glGenerateMipmap");
-
-      // Do the filtering operation, filling the mipmaps of ldTexture with the roughness filtered
-      // cubemap.
-      for (int level = 0; level < numberOfMipmapLevels; ++level) {
-        int mipmapResolution = resolution >> level;
-        GLES30.glViewport(0, 0, mipmapResolution, mipmapResolution);
-        GLError.maybeThrowGLException("Failed to set viewport dimensions", "glViewport");
-        for (int chunkIndex = 0; chunkIndex < shaders.length; ++chunkIndex) {
-          GLES30.glBindFramebuffer(GLES30.GL_FRAMEBUFFER, framebuffers[level][chunkIndex]);
-          GLError.maybeThrowGLException("Failed to bind cubemap framebuffer", "glBindFramebuffer");
-          shaders[chunkIndex].setInt("u_RoughnessLevel", level);
-          shaders[chunkIndex].lowLevelUse();
-          mesh.lowLevelDraw();
-        }
-      }
-    } finally {
-      for (ArImage image : images) {
-        image.close();
-      }
-    }
-  }
+//  public void update(ArImage[] images) {
+//    try {
+//      GLES30.glBindTexture(GLES30.GL_TEXTURE_CUBE_MAP, radianceCubemap.getTextureId());
+//      GLError.maybeThrowGLException("Failed to bind radiance cubemap texture", "glBindTexture");
+//
+//      if (images.length != NUMBER_OF_CUBE_FACES) {
+//        throw new IllegalArgumentException(
+//            "Number of images differs from the number of sides of a cube.");
+//      }
+//
+//      for (int i = 0; i < NUMBER_OF_CUBE_FACES; ++i) {
+//        ArImage image = images[i];
+//        // Sanity check for the format of the cubemap.
+//        if (image.getFormat() != ImageFormat.RGBA_FP16) {
+//          throw new IllegalArgumentException(
+//              "Unexpected image format for cubemap: " + image.getFormat());
+//        }
+//        if (image.getHeight() != image.getWidth()) {
+//          throw new IllegalArgumentException("Cubemap face is not square.");
+//        }
+//        if (image.getHeight() != resolution) {
+//          throw new IllegalArgumentException(
+//              "Cubemap face resolution ("
+//                  + image.getHeight()
+//                  + ") does not match expected value ("
+//                  + resolution
+//                  + ").");
+//        }
+//
+//        GLES30.glTexImage2D(
+//            GLES30.GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
+//            /*level=*/ 0,
+//            GLES30.GL_RGBA16F,
+//            /*width=*/ resolution,
+//            /*height=*/ resolution,
+//            /*border=*/ 0,
+//            GLES30.GL_RGBA,
+//            GLES30.GL_HALF_FLOAT,
+//            image.getPlanes()[0].getBuffer());
+//        GLError.maybeThrowGLException("Failed to populate cubemap face", "glTexImage2D");
+//      }
+//
+//      GLES30.glGenerateMipmap(GLES30.GL_TEXTURE_CUBE_MAP);
+//      GLError.maybeThrowGLException("Failed to generate cubemap mipmaps", "glGenerateMipmap");
+//
+//      // Do the filtering operation, filling the mipmaps of ldTexture with the roughness filtered
+//      // cubemap.
+//      for (int level = 0; level < numberOfMipmapLevels; ++level) {
+//        int mipmapResolution = resolution >> level;
+//        GLES30.glViewport(0, 0, mipmapResolution, mipmapResolution);
+//        GLError.maybeThrowGLException("Failed to set viewport dimensions", "glViewport");
+//        for (int chunkIndex = 0; chunkIndex < shaders.length; ++chunkIndex) {
+//          GLES30.glBindFramebuffer(GLES30.GL_FRAMEBUFFER, framebuffers[level][chunkIndex]);
+//          GLError.maybeThrowGLException("Failed to bind cubemap framebuffer", "glBindFramebuffer");
+//          shaders[chunkIndex].setInt("u_RoughnessLevel", level);
+//          shaders[chunkIndex].lowLevelUse();
+//          mesh.lowLevelDraw();
+//        }
+//      }
+//    } finally {
+//      for (ArImage image : images) {
+//        image.close();
+//      }
+//    }
+//  }
 
   /** Returns the number of mipmap levels in the filtered cubemap texture. */
   public int getNumberOfMipmapLevels() {
