@@ -28,6 +28,10 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".presentation.DaVAutoArActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".presentation.ARcameraActivity"
             android:exported="false"
             android:screenOrientation="portrait" />

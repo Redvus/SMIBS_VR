@@ -5,42 +5,24 @@ import android.opengl.Matrix
 import android.util.Log
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
-import com.google.ar.core.Anchor
-import com.google.ar.core.Camera
-import com.google.ar.core.DepthPoint
-import com.google.ar.core.Frame
-import com.google.ar.core.InstantPlacementPoint
-import com.google.ar.core.LightEstimate
-import com.google.ar.core.Plane
-import com.google.ar.core.Point
-import com.google.ar.core.Session
-import com.google.ar.core.Trackable
-import com.google.ar.core.TrackingFailureReason
-import com.google.ar.core.TrackingState
-import com.redvus.smibsvirtual.helpers.DisplayRotationHelper
-import com.redvus.smibsvirtual.helpers.TrackingStateHelper
-import com.redvus.smibsvirtual.samplerender.Framebuffer
-import com.redvus.smibsvirtual.samplerender.GLError
-import com.redvus.smibsvirtual.samplerender.Mesh
-import com.redvus.smibsvirtual.samplerender.SampleRender
-import com.redvus.smibsvirtual.samplerender.Shader
-import com.redvus.smibsvirtual.samplerender.Texture
-import com.redvus.smibsvirtual.samplerender.VertexBuffer
-import com.redvus.smibsvirtual.samplerender.arcore.BackgroundRenderer
-import com.redvus.smibsvirtual.samplerender.arcore.PlaneRenderer
-import com.redvus.smibsvirtual.samplerender.arcore.SpecularCubemapFilter
+import com.google.ar.core.*
 import com.google.ar.core.exceptions.CameraNotAvailableException
 import com.google.ar.core.exceptions.NotYetAvailableException
 import com.redvus.smibsvirtual.R
-import com.redvus.smibsvirtual.presentation.DaVClockArActivity
+import com.redvus.smibsvirtual.helpers.DisplayRotationHelper
+import com.redvus.smibsvirtual.helpers.TrackingStateHelper
+import com.redvus.smibsvirtual.presentation.DaVAutoArActivity
+import com.redvus.smibsvirtual.samplerender.*
+import com.redvus.smibsvirtual.samplerender.arcore.BackgroundRenderer
+import com.redvus.smibsvirtual.samplerender.arcore.PlaneRenderer
+import com.redvus.smibsvirtual.samplerender.arcore.SpecularCubemapFilter
 import java.io.IOException
 import java.nio.ByteBuffer
 
-/** Renders the HelloAR application using our example Renderer. */
-class DaVClockArRenderer(val activity: DaVClockArActivity) :
-    SampleRender.Renderer, DefaultLifecycleObserver {
+class DaVAutoArRenderer(val activity: DaVAutoArActivity) : SampleRender.Renderer,
+    DefaultLifecycleObserver {
     companion object {
-        val TAG = "DaVClockArRenderer"
+        val TAG = "DaVAutoArRenderer"
 
         // See the definition of updateSphericalHarmonicsCoefficients for an explanation of these
         // constants.
@@ -207,7 +189,7 @@ class DaVClockArRenderer(val activity: DaVClockArActivity) :
             virtualObjectAlbedoTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_clock/Textures/Clock_Mono_Clock_AlbedoTransparency.png",
+                    "models/DaV_auto/Textures/Leomobile_BaseMap.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.SRGB
                 )
@@ -215,7 +197,7 @@ class DaVClockArRenderer(val activity: DaVClockArActivity) :
             virtualObjectAlbedoInstantPlacementTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_clock/Textures/Clock_Mono_Clock_Normal.png",
+                    "models/DaV_auto/Textures/Leomobile_Normal.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.SRGB
                 )
@@ -223,11 +205,12 @@ class DaVClockArRenderer(val activity: DaVClockArActivity) :
             val virtualObjectPbrTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_clock/Textures/Clock_Mono_Clock_SpecularSmoothness.png",
+                    "models/DaV_auto/Textures/Leomobile_MaskMap.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.LINEAR
                 )
-            virtualObjectMesh = Mesh.createFromAsset(render, "models/DaV_clock/DaV_clock.obj")
+            virtualObjectMesh =
+                Mesh.createFromAsset(render, "models/DaV_auto/DaV_auto.obj")
             virtualObjectShader =
                 Shader.createFromAssets(
                     render,
@@ -435,7 +418,7 @@ class DaVClockArRenderer(val activity: DaVClockArActivity) :
             viewMatrix
         )
         updateSphericalHarmonicsCoefficients(lightEstimate.environmentalHdrAmbientSphericalHarmonics)
-//        cubemapFilter.update(lightEstimate.acquireEnvironmentalHdrCubeMap())
+//            cubemapFilter.update(lightEstimate.acquireEnvironmentalHdrCubeMap())
     }
 
     private fun updateMainLight(
@@ -535,4 +518,3 @@ class DaVClockArRenderer(val activity: DaVClockArActivity) :
     private fun showError(errorMessage: String) =
         activity.view.snackbarHelper.showError(activity, errorMessage)
 }
-

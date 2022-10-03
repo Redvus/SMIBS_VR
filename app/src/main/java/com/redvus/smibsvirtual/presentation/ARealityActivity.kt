@@ -89,7 +89,7 @@ class ARealityActivity : AppCompatActivity() {
                 getString(R.string.davMobileText)
             ),
             Project(
-                R.drawable.dav_board_mobile,
+                R.drawable.dav_board_excavator,
                 getString(R.string.davExcavatorTitle),
                 getString(R.string.davExcavatorText)
             ),
@@ -104,7 +104,7 @@ class ARealityActivity : AppCompatActivity() {
                 getString(R.string.davClockText)
             ),
             Project(
-                R.drawable.dav_board_mobile,
+                R.drawable.dav_board_wheel,
                 getString(R.string.davWheelTitle),
                 getString(R.string.davWheelText)
             )

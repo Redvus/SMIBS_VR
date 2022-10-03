@@ -95,7 +95,7 @@ class DaVCalculatorArRenderer(val activity: DaVCalculatorArActivity) :
         lateinit var virtualObjectAlbedoTexture: Texture
         lateinit var virtualObjectAlbedoInstantPlacementTexture: Texture
 
-        private val wrappedAnchors = mutableListOf<WrappedAnchorCalc>()
+        private val wrappedAnchors = mutableListOf<WrappedAnchor>()
 
         // Environmental HDR
         lateinit var dfgTexture: Texture
@@ -519,7 +519,7 @@ class DaVCalculatorArRenderer(val activity: DaVCalculatorArActivity) :
                 // space. This anchor is created on the Plane to place the 3D model
                 // in the correct position relative both to the world and to the plane.
                 wrappedAnchors.add(
-                    WrappedAnchorCalc(
+                    WrappedAnchor(
                         firstHitResult.createAnchor(),
                         firstHitResult.trackable
                     )
@@ -534,12 +534,3 @@ class DaVCalculatorArRenderer(val activity: DaVCalculatorArActivity) :
     private fun showError(errorMessage: String) =
         activity.view.snackbarHelper.showError(activity, errorMessage)
 }
-
-/**
- * Associates an Anchor with the trackable it was attached to. This is used to be able to check
- * whether or not an Anchor originally was attached to an {@link InstantPlacementPoint}.
- */
-private data class WrappedAnchorCalc(
-    val anchor: Anchor,
-    val trackable: Trackable,
-)

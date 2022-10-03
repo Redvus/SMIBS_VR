@@ -1,6 +1,5 @@
 package com.redvus.smibsvirtual.domain
 
-import android.content.res.Resources
 import android.opengl.GLSurfaceView
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -10,10 +9,9 @@ import com.google.ar.core.Config
 import com.redvus.smibsvirtual.R
 import com.redvus.smibsvirtual.helpers.SnackbarHelper
 import com.redvus.smibsvirtual.helpers.TapHelper
-import com.redvus.smibsvirtual.presentation.DaVCalculatorArActivity
+import com.redvus.smibsvirtual.presentation.DaVAutoArActivity
 
-/** Contains UI elements for Hello AR. */
-class DaVCalculatorArView(val activity: DaVCalculatorArActivity) : DefaultLifecycleObserver {
+class DaVAutoArView(val activity: DaVAutoArActivity) : DefaultLifecycleObserver {
     val root = View.inflate(activity, R.layout.activity_artest, null)
     val surfaceView = root.findViewById<GLSurfaceView>(R.id.surfaceview)
 

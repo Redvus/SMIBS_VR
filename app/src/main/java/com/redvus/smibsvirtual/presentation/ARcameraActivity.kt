@@ -39,6 +39,7 @@ class ARcameraActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
         val scanQRResult: String = rawResult.toString()
         val davClockQR = getString(R.string.davClockQR)
         val davCalculatorQR = getString(R.string.davCalculatorQR)
+        val davAutoQR = getString(R.string.davAutoQR)
 ////
         when (scanQRResult) {
             davClockQR -> {
@@ -46,6 +47,9 @@ class ARcameraActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
             }
             davCalculatorQR -> {
                 startActivity(Intent(this, DaVCalculatorArActivity::class.java))
+            }
+            davAutoQR -> {
+                startActivity(Intent(this, DaVAutoArActivity::class.java))
             }
             else -> {
                 startActivity(Intent(this, ARealityActivity::class.java))
