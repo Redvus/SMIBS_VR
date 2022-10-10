@@ -32,6 +32,10 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".presentation.DaVParashuteArActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".presentation.ARcameraActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
