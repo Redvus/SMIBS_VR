@@ -10,5 +10,5 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
-map_Kd /Volumes/Vault22/Mobile/Source/SMIBS_VR/DaVinci/Clock/Textures/Clock_Mono_Clock_AlbedoTransparency.jpg
-map_Ks /Volumes/Vault22/Mobile/Source/SMIBS_VR/DaVinci/Clock/Textures/Clock_Mono_Clock_SpecularSmoothness.png
+map_Kd Textures/Clock_Mono_Clock_AlbedoTransparency.jpg
+map_Ks Textures/Clock_Mono_Clock_SpecularSmoothness.png

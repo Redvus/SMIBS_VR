@@ -11,6 +11,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.redvus.smibsvirtual.*
 import com.redvus.smibsvirtual.data.Project
 import com.redvus.smibsvirtual.databinding.ActivityArealityBinding
@@ -22,7 +23,8 @@ class ARealityActivity : AppCompatActivity() {
     private lateinit var drawerToggle: ActionBarDrawerToggle
     private lateinit var drawerLayout: DrawerLayout
 
-    private var buttonScanner: Button? = null
+//    private var buttonScanner: Button? = null
+    private var buttonScanner: FloatingActionButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -94,12 +96,12 @@ class ARealityActivity : AppCompatActivity() {
                 getString(R.string.davExcavatorText)
             ),
             Project(
-                R.drawable.dav_board_mobile,
+                R.drawable.dav_board_parashute,
                 getString(R.string.davParashuteTitle),
                 getString(R.string.davParashuteText)
             ),
             Project(
-                R.drawable.dav_board_mobile,
+                R.drawable.dav_board_clock,
                 getString(R.string.davClockTitle),
                 getString(R.string.davClockText)
             ),

@@ -22,7 +22,7 @@ import java.nio.ByteBuffer
 class DaVParashuteArRenderer(val activity: DaVParashuteArActivity) : SampleRender.Renderer,
     DefaultLifecycleObserver {
     companion object {
-        val TAG = "DaVAutoArRenderer"
+        val TAG = "DaVParachuteArRenderer"
 
         // See the definition of updateSphericalHarmonicsCoefficients for an explanation of these
         // constants.
@@ -197,7 +197,7 @@ class DaVParashuteArRenderer(val activity: DaVParashuteArActivity) : SampleRende
             virtualObjectAlbedoInstantPlacementTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_parashute/Textures/DaV_parachute_Normal.png",
+                    "models/DaV_parashute/Textures/DaV_parachute_Displacement.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.SRGB
                 )
@@ -205,7 +205,7 @@ class DaVParashuteArRenderer(val activity: DaVParashuteArActivity) : SampleRende
             val virtualObjectPbrTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_parashute/Textures/DaV_parachute_SpecularSmoothness.png",
+                    "models/DaV_parashute/Textures/DaV_parachute_Normal.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.LINEAR
                 )

@@ -40,7 +40,10 @@ class ARcameraActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
         val davClockQR = getString(R.string.davClockQR)
         val davCalculatorQR = getString(R.string.davCalculatorQR)
         val davAutoQR = getString(R.string.davAutoQR)
-        val davParashuteQR = getString(R.string.davParashuteQR)
+        val davParachuteQR = getString(R.string.davParachuteQR)
+        val davGiantBowQR = getString(R.string.davGiantBowQR)
+        val davExcavatorQR = getString(R.string.davExcavatorQR)
+        val davWheelQR = getString(R.string.davWheelQR)
 ////
         when (scanQRResult) {
             davClockQR -> {
@@ -52,8 +55,17 @@ class ARcameraActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
             davAutoQR -> {
                 startActivity(Intent(this, DaVAutoArActivity::class.java))
             }
-            davParashuteQR -> {
+            davParachuteQR -> {
                 startActivity(Intent(this, DaVParashuteArActivity::class.java))
+            }
+            davGiantBowQR -> {
+                startActivity(Intent(this, DaVGiantBowArActivity::class.java))
+            }
+            davExcavatorQR -> {
+                startActivity(Intent(this, DavExcavatorArActivity::class.java))
+            }
+            davWheelQR -> {
+                startActivity(Intent(this, DavWheelArActivity::class.java))
             }
             else -> {
                 startActivity(Intent(this, ARealityActivity::class.java))

@@ -206,7 +206,7 @@ class DaVCalculatorArRenderer(val activity: DaVCalculatorArActivity) :
                 virtualObjectAlbedoTexture =
                     Texture.createFromAsset(
                         render,
-                        "models/DaV_calculator/Textures/Calculator_BaseMap.png",
+                        "models/DaV_calculator/Textures/DaV_Calculator_BaseMap.png",
                         Texture.WrapMode.CLAMP_TO_EDGE,
                         Texture.ColorFormat.SRGB
                     )
@@ -214,7 +214,7 @@ class DaVCalculatorArRenderer(val activity: DaVCalculatorArActivity) :
                 virtualObjectAlbedoInstantPlacementTexture =
                     Texture.createFromAsset(
                         render,
-                        "models/DaV_calculator/Textures/Calculator_Normal.png",
+                        "models/DaV_calculator/Textures/DaV_Calculator_MaskMap.png",
                         Texture.WrapMode.CLAMP_TO_EDGE,
                         Texture.ColorFormat.SRGB
                     )
@@ -222,7 +222,7 @@ class DaVCalculatorArRenderer(val activity: DaVCalculatorArActivity) :
                 val virtualObjectPbrTexture =
                     Texture.createFromAsset(
                         render,
-                        "models/DaV_calculator/Textures/Calculator_MaskMap.png",
+                        "models/DaV_calculator/Textures/DaV_Calculator_Normal.png",
                         Texture.WrapMode.CLAMP_TO_EDGE,
                         Texture.ColorFormat.LINEAR
                     )

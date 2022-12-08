@@ -189,7 +189,7 @@ class DaVAutoArRenderer(val activity: DaVAutoArActivity) : SampleRender.Renderer
             virtualObjectAlbedoTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_auto/Textures/Leomobile_BaseMap.png",
+                    "models/DaV_auto/Textures/DaV_Auto_BaseMap.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.SRGB
                 )
@@ -197,7 +197,7 @@ class DaVAutoArRenderer(val activity: DaVAutoArActivity) : SampleRender.Renderer
             virtualObjectAlbedoInstantPlacementTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_auto/Textures/Leomobile_Normal.png",
+                    "models/DaV_auto/Textures/DaV_Auto_MaskMap.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.SRGB
                 )
@@ -205,7 +205,7 @@ class DaVAutoArRenderer(val activity: DaVAutoArActivity) : SampleRender.Renderer
             val virtualObjectPbrTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_auto/Textures/Leomobile_MaskMap.png",
+                    "models/DaV_auto/Textures/DaV_Auto_Normal.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.LINEAR
                 )

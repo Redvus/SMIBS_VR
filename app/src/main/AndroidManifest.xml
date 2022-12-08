@@ -36,6 +36,18 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".presentation.DaVGiantBowArActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.DavExcavatorArActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.DavWheelArActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".presentation.ARcameraActivity"
             android:exported="false"
             android:screenOrientation="portrait" />

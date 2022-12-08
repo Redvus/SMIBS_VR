@@ -5,7 +5,6 @@ import android.opengl.Matrix
 import android.util.Log
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
-import com.google.ar.core.Anchor
 import com.google.ar.core.Camera
 import com.google.ar.core.DepthPoint
 import com.google.ar.core.Frame
@@ -14,7 +13,6 @@ import com.google.ar.core.LightEstimate
 import com.google.ar.core.Plane
 import com.google.ar.core.Point
 import com.google.ar.core.Session
-import com.google.ar.core.Trackable
 import com.google.ar.core.TrackingFailureReason
 import com.google.ar.core.TrackingState
 import com.redvus.smibsvirtual.helpers.DisplayRotationHelper
@@ -207,7 +205,7 @@ class DaVClockArRenderer(val activity: DaVClockArActivity) :
             virtualObjectAlbedoTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_clock/Textures/Clock_Mono_Clock_AlbedoTransparency.png",
+                    "models/DaV_clock/Textures/DaV_Clock_Color.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.SRGB
                 )
@@ -215,7 +213,7 @@ class DaVClockArRenderer(val activity: DaVClockArActivity) :
             virtualObjectAlbedoInstantPlacementTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_clock/Textures/Clock_Mono_Clock_Normal.png",
+                    "models/DaV_clock/Textures/DaV_Clock_Displacement.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.SRGB
                 )
@@ -223,7 +221,7 @@ class DaVClockArRenderer(val activity: DaVClockArActivity) :
             val virtualObjectPbrTexture =
                 Texture.createFromAsset(
                     render,
-                    "models/DaV_clock/Textures/Clock_Mono_Clock_SpecularSmoothness.png",
+                    "models/DaV_clock/Textures/DaV_Clock_Normal.png",
                     Texture.WrapMode.CLAMP_TO_EDGE,
                     Texture.ColorFormat.LINEAR
                 )

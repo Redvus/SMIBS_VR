@@ -19,7 +19,7 @@ import com.redvus.smibsvirtual.samplerender.SampleRender
 
 class DaVParashuteArActivity : AppCompatActivity() {
     companion object {
-        private const val TAG = "DaVParashuteActivity"
+        private const val TAG = "DaVParachuteActivity"
     }
 
     lateinit var arCoreSessionHelper: ARCoreSessionLifecycleHelper
