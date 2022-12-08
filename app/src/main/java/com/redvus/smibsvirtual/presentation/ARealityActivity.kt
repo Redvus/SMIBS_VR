@@ -82,8 +82,8 @@ class ARealityActivity : AppCompatActivity() {
             ),
             Project(
                 R.drawable.dav_board_calculator,
-                getString(R.string.davCalculatorTitle),
-                getString(R.string.davCalculatorText)
+                getString(R.string.davGearwheelTitle),
+                getString(R.string.davGearwheelText)
             ),
             Project(
                 R.drawable.dav_board_mobile,
@@ -109,6 +109,11 @@ class ARealityActivity : AppCompatActivity() {
                 R.drawable.dav_board_wheel,
                 getString(R.string.davWheelTitle),
                 getString(R.string.davWheelText)
+            ),
+            Project(
+                R.drawable.dav_board_calc,
+                getString(R.string.davCalculatorTitle),
+                getString(R.string.davCalculatorText)
             )
         )
 
