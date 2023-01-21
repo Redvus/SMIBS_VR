@@ -8,6 +8,7 @@ import com.google.ar.core.ArCoreApk
 import com.google.ar.core.Session
 import com.redvus.smibsvirtual.helpers.CameraPermissionHelper
 import com.google.ar.core.exceptions.CameraNotAvailableException
+import com.redvus.smibsvirtual.R
 
 /**
  * Manages an ARCore Session using the Android Lifecycle API. Before starting a Session, this class
@@ -110,7 +111,7 @@ class ARCoreSessionLifecycleHelper(
             // Use toast instead of snackbar here since the activity will exit.
             Toast.makeText(
                 activity,
-                "Camera permission is needed to run this application",
+                R.string.app_permission_camera,
                 Toast.LENGTH_LONG
             )
                 .show()

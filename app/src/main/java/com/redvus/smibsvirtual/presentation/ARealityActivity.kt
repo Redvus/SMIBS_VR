@@ -62,6 +62,9 @@ class ARealityActivity : AppCompatActivity() {
                     R.id.menu_action_how -> {
                         startActivity(Intent(this@ARealityActivity, HowActivity::class.java))
                     }
+                    R.id.menu_action_about_app -> {
+                        startActivity(Intent(this@ARealityActivity, AboutAppActivity::class.java))
+                    }
                 }
                 true
             }

@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.redvus.smibsvirtual.data.Project
 
@@ -29,7 +30,7 @@ class ARealityAdapter(projects: Array<Project>) : RecyclerView.Adapter<ARealityA
         fun bindProject(project: Project) {
             projectImage.setImageResource(project.image)
             projectTitle.text = project.name
-            projectText.text = project.description
+            projectText.text = HtmlCompat.fromHtml(project.description, HtmlCompat.FROM_HTML_MODE_LEGACY)
         }
     }
 

@@ -11,6 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/backgroundColorDark"
         android:isScrollContainer="true"
         android:scrollbars="none">
 
@@ -42,6 +43,7 @@
             android:id="@+id/button_scan_ar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:clickable="true"
@@ -52,20 +54,20 @@
             app:srcCompat="@drawable/ic_qr_code_scanner"
             tools:ignore="ImageContrastCheck" />
 
-<!--        <Button-->
-<!--            android:id="@+id/button_scan_ar"-->
-<!--            android:layout_width="124dp"-->
-<!--            android:layout_height="64dp"-->
-<!--            android:layout_marginEnd="12dp"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:paddingLeft="16dp"-->
-<!--            android:backgroundTint="@color/accentColor"-->
-<!--            android:drawableStart="@drawable/ic_qr_code_scanner"-->
-<!--            android:elevation="4dp"-->
-<!--            android:text="@string/buttonScan"-->
-<!--            android:textColor="@color/primaryColor"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent" />-->
+        <!--        <Button-->
+        <!--            android:id="@+id/button_scan_ar"-->
+        <!--            android:layout_width="124dp"-->
+        <!--            android:layout_height="64dp"-->
+        <!--            android:layout_marginEnd="12dp"-->
+        <!--            android:layout_marginBottom="16dp"-->
+        <!--            android:paddingLeft="16dp"-->
+        <!--            android:backgroundTint="@color/accentColor"-->
+        <!--            android:drawableStart="@drawable/ic_qr_code_scanner"-->
+        <!--            android:elevation="4dp"-->
+        <!--            android:text="@string/buttonScan"-->
+        <!--            android:textColor="@color/primaryColor"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

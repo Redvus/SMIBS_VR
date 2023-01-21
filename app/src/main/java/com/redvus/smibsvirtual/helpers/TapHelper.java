@@ -29,7 +29,7 @@ import java.util.concurrent.BlockingQueue;
  */
 public final class TapHelper implements OnTouchListener {
   private final GestureDetector gestureDetector;
-  private final BlockingQueue<MotionEvent> queuedSingleTaps = new ArrayBlockingQueue<>(16);
+  private final BlockingQueue<MotionEvent> queuedSingleTaps = new ArrayBlockingQueue<>(1);
 
   /**
    * Creates the tap helper.

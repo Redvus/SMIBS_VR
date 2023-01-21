@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.text.HtmlCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.redvus.smibsvirtual.R
 import com.redvus.smibsvirtual.databinding.ActivityHowBinding
@@ -47,10 +49,17 @@ class HowActivity : AppCompatActivity() {
                     R.id.menu_action_how -> {
                         startActivity(Intent(this@HowActivity, HowActivity::class.java))
                     }
+                    R.id.menu_action_about_app -> {
+                        startActivity(Intent(this@HowActivity, AboutAppActivity::class.java))
+                    }
                 }
                 true
             }
         }
+
+        val longText = getString(R.string.textHow)
+        val output: TextView = binding.textHow
+        output.text = HtmlCompat.fromHtml(longText, HtmlCompat.FROM_HTML_MODE_LEGACY)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
