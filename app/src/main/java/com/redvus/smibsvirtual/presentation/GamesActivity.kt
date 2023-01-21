@@ -41,11 +41,17 @@ class GamesActivity : AppCompatActivity() {
                     R.id.menu_action_ar -> {
                         startActivity(Intent(this@GamesActivity, ARealityActivity::class.java))
                     }
+                    R.id.menu_action_games -> {
+                        startActivity(Intent(this@GamesActivity, GamesActivity::class.java))
+                    }
                     R.id.menu_action_about -> {
                         startActivity(Intent(this@GamesActivity, AboutActivity::class.java))
                     }
                     R.id.menu_action_how -> {
                         startActivity(Intent(this@GamesActivity, HowActivity::class.java))
+                    }
+                    R.id.menu_action_about_app -> {
+                        startActivity(Intent(this@GamesActivity, AboutAppActivity::class.java))
                     }
                 }
                 true
@@ -59,49 +65,67 @@ class GamesActivity : AppCompatActivity() {
                 R.drawable.smibsg_cosmicpuzzles,
                 getString(R.string.titleCosmicPuzzles),
                 getString(R.string.textCosmicPuzzles),
-                R.string.packageCosmicPuzzles
+                getString(R.string.packageCosmicPuzzles)
             ),
             Game(
                 R.drawable.smibsg_igroskazy,
                 getString(R.string.titleIgroskazi),
                 getString(R.string.textIgroskazi),
-                R.string.packageIgroskazy
+                getString(R.string.packageIgroskazy)
             ),
             Game(
                 R.drawable.smibsg_magicfeather,
                 getString(R.string.titleMagicfeather),
                 getString(R.string.textMagicfeather),
-                R.string.packageMagicfeather
+                getString(R.string.packageMagicfeather)
             ),
             Game(
                 R.drawable.smibsg_oldappartment,
                 getString(R.string.titleOldappartment),
                 getString(R.string.textOldappartment),
-                R.string.packageOldappartment
+                getString(R.string.packageOldappartment)
             ),
             Game(
                 R.drawable.smibsg_pasternak,
                 getString(R.string.titlePasternak),
                 getString(R.string.textPasternak),
-                R.string.packagePasternak
+                getString(R.string.packagePasternak)
             ),
             Game(
                 R.drawable.smibsg_rilke,
                 getString(R.string.titleRilke),
                 getString(R.string.textRilke),
-                R.string.packageRilke
+                getString(R.string.packageRilke)
             ),
             Game(
                 R.drawable.smibsg_siberiandraw,
                 getString(R.string.titleSiberiandraw),
                 getString(R.string.textSiberiandraw),
-                R.string.packageSiberiandraw
+                getString(R.string.packageSiberiandraw)
             ),
             Game(
                 R.drawable.smibsg_smekailo,
                 getString(R.string.titleSmekailo),
                 getString(R.string.textSmekailo),
-                R.string.packageSmekailo
+                getString(R.string.packageSmekailo)
+            ),
+            Game(
+                R.drawable.smibsg_classics,
+                getString(R.string.titleClassics),
+                getString(R.string.textClassics),
+                getString(R.string.packageClassics)
+            ),
+            Game(
+                R.drawable.smibsg_craevedia,
+                getString(R.string.titleCraevedia),
+                getString(R.string.textCraevedia),
+                getString(R.string.packageCraevedia)
+            ),
+            Game(
+                R.drawable.smibsg_cvetaeva,
+                getString(R.string.titleCvetaeva),
+                getString(R.string.textCvetaeva),
+                getString(R.string.packageCvetaeva)
             )
         )
 

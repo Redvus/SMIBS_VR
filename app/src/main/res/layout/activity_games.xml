@@ -11,6 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/backgroundColorDark"
         android:isScrollContainer="true"
         android:scrollbars="none">
 
@@ -19,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipToPadding="false"
-            android:paddingTop="62dp"
+            android:paddingTop="72dp"
             android:paddingBottom="10dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_game" />
