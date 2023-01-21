@@ -17,7 +17,7 @@
         <item name="colorPrimaryVariant" tools:ignore="DuplicateDefinition">@color/primaryText</item>
         <item name="colorOnPrimary" tools:ignore="DuplicateDefinition">@color/primaryColor</item>
         <item name="android:navigationBarColor">@color/accentColor</item>
-        <item name="android:windowBackground">@color/backgroundColorDark</item>
+        <item name="android:windowBackground">@color/backgroundColor</item>
         <item name="android:textColorPrimary">@color/primaryText</item>
         <item name="colorAccent">@color/accentColor</item>
         <item name="titleTextColor">@color/primaryColor</item>

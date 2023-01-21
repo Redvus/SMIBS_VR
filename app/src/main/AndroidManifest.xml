@@ -20,59 +20,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SMIBSVirtual">
         <activity
-            android:name=".presentation.DaVClockArActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.DaVCalculatorArActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.DaVAutoArActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.DaVParashuteArActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.DaVGiantBowArActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.DavExcavatorArActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.DavWheelArActivity"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.ARcameraActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.ARealityActivity"
-            android:exported="false"
-            android:label="@string/actionAR"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.GamesActivity"
-            android:exported="false"
-            android:label="@string/actionGames"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.HowActivity"
-            android:exported="false"
-            android:label="@string/actionHow"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".presentation.AboutActivity"
-            android:exported="true"
-            android:label="@string/actionAbout"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".presentation.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".presentation.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -81,6 +39,56 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".presentation.DaVClockArActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.DaVCalculatorArActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.DaVAutoArActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.DaVParashuteArActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.DaVGiantBowArActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.DavExcavatorArActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.DavWheelArActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.ARcameraActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.ARealityActivity"
+            android:exported="true"
+            android:label="@string/actionAR"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.GamesActivity"
+            android:exported="true"
+            android:label="@string/actionGames"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.HowActivity"
+            android:exported="true"
+            android:label="@string/actionHow"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.AboutActivity"
+            android:exported="true"
+            android:label="@string/actionAbout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.AboutAppActivity"
+            android:exported="true"
+            android:label="@string/actionAboutApp"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.ar.core"
