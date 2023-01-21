@@ -40,5 +40,11 @@
         android:title="@string/actionHow"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/menu_action_about_app"
+        android:icon="@drawable/ic_menu_info_about"
+        android:orderInCategory="100"
+        android:title="@string/actionAboutApp"
+        app:showAsAction="never" />
 
 </menu>

@@ -67,6 +67,10 @@ class MainActivity : AppCompatActivity() {
         mainItemMenu4.setOnClickListener {
             startActivity(Intent(this@MainActivity, HowActivity::class.java))
         }
+
+        mainItemMenu5.setOnClickListener {
+            startActivity(Intent(this@MainActivity, AboutAppActivity::class.java))
+        }
     }
 
 }

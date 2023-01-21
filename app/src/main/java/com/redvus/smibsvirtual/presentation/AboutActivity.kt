@@ -7,8 +7,9 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import com.redvus.smibsvirtual.*
+import com.redvus.smibsvirtual.R
 import com.redvus.smibsvirtual.databinding.ActivityAboutBinding
+
 
 class AboutActivity : AppCompatActivity() {
 
@@ -51,6 +52,9 @@ class AboutActivity : AppCompatActivity() {
                     }
                     R.id.menu_action_how -> {
                         startActivity(Intent(this@AboutActivity, HowActivity::class.java))
+                    }
+                    R.id.menu_action_about_app -> {
+                        startActivity(Intent(this@AboutActivity, AboutAppActivity::class.java))
                     }
                 }
                 true
