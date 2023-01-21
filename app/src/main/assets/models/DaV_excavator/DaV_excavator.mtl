@@ -1,0 +1,24 @@
+# Blender MTL File: 'Excavator_vr.blend'
+# Material Count: 2
+
+newmtl Cloth
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Kd 0.400000 0.318302 0.171905
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+
+newmtl Excavator
+Ns 20.000006
+Ka 1.000000 1.000000 1.000000
+Kd 0.952941 0.560784 0.050980
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd /Volumes/Vault22/Mobile/Source/SMIBS_VR/DaVinci/Excavator/material/Wood026_1K_Color.jpg
+map_Ns /Volumes/Vault22/Mobile/Source/SMIBS_VR/DaVinci/Excavator/material/Wood026_1K_Roughness.jpg
