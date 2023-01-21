@@ -5,7 +5,6 @@ import android.opengl.Matrix
 import android.util.Log
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
-import com.google.ar.core.Anchor
 import com.google.ar.core.Camera
 import com.google.ar.core.DepthPoint
 import com.google.ar.core.Frame
@@ -14,7 +13,6 @@ import com.google.ar.core.LightEstimate
 import com.google.ar.core.Plane
 import com.google.ar.core.Point
 import com.google.ar.core.Session
-import com.google.ar.core.Trackable
 import com.google.ar.core.TrackingFailureReason
 import com.google.ar.core.TrackingState
 import com.redvus.smibsvirtual.helpers.DisplayRotationHelper
@@ -307,7 +305,7 @@ class DaVCalculatorArRenderer(val activity: DaVCalculatorArActivity) :
                         activity.depthSettings.depthColorVisualizationEnabled()
             if (camera.trackingState == TrackingState.TRACKING && shouldGetDepthImage) {
                 try {
-                    val depthImage = frame.acquireDepthImage()
+                    val depthImage = frame.acquireDepthImage16Bits()
                     backgroundRenderer.updateCameraDepthTexture(depthImage)
                     depthImage.close()
                 } catch (e: NotYetAvailableException) {
@@ -434,7 +432,7 @@ class DaVCalculatorArRenderer(val activity: DaVCalculatorArActivity) :
                 viewMatrix
             )
             updateSphericalHarmonicsCoefficients(lightEstimate.environmentalHdrAmbientSphericalHarmonics)
-//            cubemapFilter.update(lightEstimate.acquireEnvironmentalHdrCubeMap())
+            cubemapFilter.update(lightEstimate.acquireEnvironmentalHdrCubeMap())
         }
 
         private fun updateMainLight(
