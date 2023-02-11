@@ -5,4 +5,5 @@
 
 Игры в приложении ведут на официальный сайт библиотеки https://smibs.ru/computer-games/, где можно их скачать и установить.
 
+Само приложение можно установить из РуСторе:
 https://apps.rustore.ru/app/com.redvus.smibsvirtual
