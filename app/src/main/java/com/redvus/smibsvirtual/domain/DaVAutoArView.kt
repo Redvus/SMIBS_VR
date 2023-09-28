@@ -1,5 +1,7 @@
 package com.redvus.smibsvirtual.domain
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.opengl.GLSurfaceView
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -41,16 +43,29 @@ class DaVAutoArView(val activity: DaVAutoArActivity) : DefaultLifecycleObserver 
             return // Don't need to show dialog.
         }
 
+        val builder = AlertDialog.Builder(activity)
+        builder.setTitle(R.string.options_title_with_depth)
+        builder.setMessage(R.string.depth_use_explanation)
+        builder.setPositiveButton(R.string.button_text_enable_depth) { _, _ ->
+            activity.depthSettings.setUseDepthForOcclusion(true)
+        }
+        builder.setNegativeButton(R.string.button_text_disable_depth) { _, _ ->
+            activity.depthSettings.setUseDepthForOcclusion(false)
+        }
+        val dialog = builder.create()
+        dialog.show()
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.WHITE))
+
         // Asks the user whether they want to use depth-based occlusion.
-        AlertDialog.Builder(activity)
-            .setTitle(R.string.options_title_with_depth)
-            .setMessage(R.string.depth_use_explanation)
-            .setPositiveButton(R.string.button_text_enable_depth) { _, _ ->
-                activity.depthSettings.setUseDepthForOcclusion(true)
-            }
-            .setNegativeButton(R.string.button_text_disable_depth) { _, _ ->
-                activity.depthSettings.setUseDepthForOcclusion(false)
-            }
-            .show()
+//        AlertDialog.Builder(activity)
+//            .setTitle(R.string.options_title_with_depth)
+//            .setMessage(R.string.depth_use_explanation)
+//            .setPositiveButton(R.string.button_text_enable_depth) { _, _ ->
+//                activity.depthSettings.setUseDepthForOcclusion(true)
+//            }
+//            .setNegativeButton(R.string.button_text_disable_depth) { _, _ ->
+//                activity.depthSettings.setUseDepthForOcclusion(false)
+//            }
+//            .show()
     }
 }

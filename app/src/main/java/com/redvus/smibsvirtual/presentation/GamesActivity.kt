@@ -62,6 +62,12 @@ class GamesActivity : AppCompatActivity() {
         val list = findViewById<RecyclerView>(R.id.resycler_view_games)
         val games: Array<Game> = arrayOf(
             Game(
+                R.drawable.smibsg_slavimyths,
+                getString(R.string.titleSlavicMyths),
+                getString(R.string.textSlavicMyths),
+                getString(R.string.packageSlavicMyths)
+            ),
+            Game(
                 R.drawable.smibsg_cosmicpuzzles,
                 getString(R.string.titleCosmicPuzzles),
                 getString(R.string.textCosmicPuzzles),
