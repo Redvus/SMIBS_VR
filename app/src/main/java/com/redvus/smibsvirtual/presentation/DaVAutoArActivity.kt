@@ -69,6 +69,7 @@ class DaVAutoArActivity : AppCompatActivity() {
         view = DaVAutoArView(this)
         lifecycle.addObserver(view)
         setContentView(view.root)
+        Toast.makeText(this, getText(R.string.davMobileTitle), Toast.LENGTH_LONG).show()
 
         // Sets up an example renderer using our HelloARRenderer.
         SampleRender(view.surfaceView, renderer, assets)
@@ -114,8 +115,7 @@ class DaVAutoArActivity : AppCompatActivity() {
                 this,
                 getText(R.string.cameraARPermission),
                 Toast.LENGTH_LONG
-            )
-                .show()
+            ).show()
             if (!CameraPermissionHelper.shouldShowRequestPermissionRationale(this)) {
                 // Permission denied with checking "Do not ask again".
                 CameraPermissionHelper.launchPermissionSettings(this)

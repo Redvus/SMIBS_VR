@@ -78,15 +78,15 @@ class ARealityActivity : AppCompatActivity() {
                 getString(R.string.davBowTitle),
                 getString(R.string.davBowText)
             ),
-            Project(
-                R.drawable.dav_board_wing,
-                getString(R.string.davWingTitle),
-                getString(R.string.davWingText)
-            ),
+//            Project(
+//                R.drawable.dav_board_wing,
+//                getString(R.string.davWingTitle),
+//                getString(R.string.davWingText)
+//            ),
             Project(
                 R.drawable.dav_board_calculator,
-                getString(R.string.davCalculatorTitle),
-                getString(R.string.davCalculatorText)
+                getString(R.string.davGearwheelTitle),
+                getString(R.string.davGearwheelText)
             ),
             Project(
                 R.drawable.dav_board_mobile,

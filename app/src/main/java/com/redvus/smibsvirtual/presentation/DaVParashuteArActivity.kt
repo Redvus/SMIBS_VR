@@ -69,6 +69,7 @@ class DaVParashuteArActivity : AppCompatActivity() {
         view = DaVParashuteArView(this)
         lifecycle.addObserver(view)
         setContentView(view.root)
+        Toast.makeText(this, getText(R.string.davParashuteTitle), Toast.LENGTH_LONG).show()
 
         // Sets up an example renderer using our HelloARRenderer.
         SampleRender(view.surfaceView, renderer, assets)

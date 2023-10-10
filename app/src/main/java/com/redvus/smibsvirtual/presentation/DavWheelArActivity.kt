@@ -71,6 +71,7 @@ class DavWheelArActivity : AppCompatActivity() {
         view = DaVWheelArView(this)
         lifecycle.addObserver(view)
         setContentView(view.root)
+        Toast.makeText(this, getText(R.string.davWheelTitle), Toast.LENGTH_LONG).show()
 
         // Sets up an example renderer using our HelloARRenderer.
         SampleRender(view.surfaceView, renderer, assets)

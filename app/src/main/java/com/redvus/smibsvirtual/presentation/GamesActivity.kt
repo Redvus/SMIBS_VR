@@ -74,6 +74,12 @@ class GamesActivity : AppCompatActivity() {
                 getString(R.string.packageCosmicPuzzles)
             ),
             Game(
+                R.drawable.smibsg_craevedia,
+                getString(R.string.titleCraevedia),
+                getString(R.string.textCraevedia),
+                getString(R.string.packageCraevedia)
+            ),
+            Game(
                 R.drawable.smibsg_igroskazy,
                 getString(R.string.titleIgroskazi),
                 getString(R.string.textIgroskazi),
@@ -120,12 +126,6 @@ class GamesActivity : AppCompatActivity() {
                 getString(R.string.titleClassics),
                 getString(R.string.textClassics),
                 getString(R.string.packageClassics)
-            ),
-            Game(
-                R.drawable.smibsg_craevedia,
-                getString(R.string.titleCraevedia),
-                getString(R.string.textCraevedia),
-                getString(R.string.packageCraevedia)
             ),
             Game(
                 R.drawable.smibsg_cvetaeva,

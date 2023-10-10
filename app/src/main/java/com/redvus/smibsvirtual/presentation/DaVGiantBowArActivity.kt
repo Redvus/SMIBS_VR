@@ -70,6 +70,7 @@ class DaVGiantBowArActivity: AppCompatActivity() {
         view = DaVGiantBowArView(this)
         lifecycle.addObserver(view)
         setContentView(view.root)
+        Toast.makeText(this, getText(R.string.davBowTitle), Toast.LENGTH_LONG).show()
 
         // Sets up an example renderer using our HelloARRenderer.
         SampleRender(view.surfaceView, renderer, assets)
