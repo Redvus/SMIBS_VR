@@ -155,18 +155,18 @@
     <string name="textCvetaeva">Игра </string>
 
     <!--  String Games Package  -->
-    <string name="packageCosmicPuzzles">puzzles-space</string>
+    <string name="packageCosmicPuzzles">puzzles-space-page</string>
     <string name="packageIgroskazy">game-stories</string>
-    <string name="packageMagicfeather">magic-feather</string>
-    <string name="packageOldappartment">old-apartment</string>
+    <string name="packageMagicfeather">magic-feather-page</string>
+    <string name="packageOldappartment">old-apartment-page</string>
     <string name="packagePasternak">boris-pastern</string>
     <string name="packageRilke">rilkes-journey-in-poetry</string>
     <string name="packageSiberiandraw">siberian-sketches</string>
     <string name="packageSmekailo">smekaylo</string>
-    <string name="packageCraevedia">the-computer-game-crevedia</string>
+    <string name="packageCraevedia">craevedia-page</string>
     <string name="packageClassics">classics-literature</string>
     <string name="packageCvetaeva">marina-tsvetaeva-journey-into-poetry</string>
-    <string name="packageSlavicMyths">slavic-myths</string>
+    <string name="packageSlavicMyths">slavic-myths-page</string>
 
     <!--  String How  -->
     <string name="titleHow">Использование\nприложения</string>
@@ -189,7 +189,7 @@
 
     <!--  String About App  -->
     <string name="logoAboutApp">СМИБС логотип приложения</string>
-    <string name="textAboutAppVersion">Версия 1.1.8 ® СМИБС 2024</string>
+    <string name="textAboutAppVersion">Версия 1.1.9 ® СМИБС 2024</string>
     <string name="textAboutAppLink">https://smibs.ru</string>
     <string name="textAboutAppDescription">Приложение создано на основе использования свободно распространяемого программного обеспечения и может устанавливаться на любом поддерживаемом устройстве под управлением системы андроид.\n\nАвторские права принадлежат Муниципальному бюджетному учреждению культуры городского округа Самара «Самарская муниципальная информационно-библиотечная система».</string>
 
