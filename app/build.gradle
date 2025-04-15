@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-    compileSdk 33
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.redvus.smibsvirtual"
-        minSdkVersion 24
-        targetSdkVersion 33
+        minSdkVersion 26
+        //noinspection EditedTargetSdkVersion
+        targetSdkVersion 35
         versionCode 1
         versionName "1.1.7"
 
@@ -33,6 +34,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'com.redvus.smibsvirtual'
 }
 
 dependencies {
@@ -49,8 +51,8 @@ dependencies {
     implementation 'de.javagl:obj:0.3.0'
     implementation 'com.google.android.material:material:1.7.0'
 
-    implementation 'me.dm7.barcodescanner:zbar:1.8.4'
-    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+    implementation 'me.dm7.barcodescanner:zbar:1.9.8'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

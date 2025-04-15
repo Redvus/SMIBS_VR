@@ -95,7 +95,7 @@
     <string name="searching_planes" translatable="false">Поиск поверхности (поводите смартфоном)...</string>
     <string name="waiting_taps" translatable="false">Кликните на поверхности один раз для размещения объекта</string>
 
-    <string name="install_ar_services">Пожалуйста, установите сервисы Google Play для AR</string>
+    <string name="install_ar_services" translatable="false">Пожалуйста, установите сервисы Google Play для AR</string>
     <string name="camera_not_available">Камера недоступна во время onDrawFrame</string>
 
     <!--  String for ARCore  -->
