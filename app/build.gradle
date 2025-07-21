@@ -10,9 +10,9 @@ android {
         applicationId "com.redvus.smibsvirtual"
         minSdkVersion 26
         //noinspection EditedTargetSdkVersion
-        targetSdkVersion 35
+        targetSdkVersion 36
         versionCode 1
-        versionName "1.1.9"
+        versionName "1.1.10"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
